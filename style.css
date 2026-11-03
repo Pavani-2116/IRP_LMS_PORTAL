@@ -1,0 +1,466 @@
+/* ===== Colors (from the assignment) ===== */
+:root {
+  --navy: #003366;
+  --orange: #FE781E;
+  --blue: #5F9FE0;
+  --light-blue: #E2F2FD;
+  --white: #FFFFFF;
+  --border: #D6E9FF;
+  --gray: #6b7a8c;
+}
+
+/* ===== Basic reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--white);
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===== Navigation bar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 40px;
+  background-color: var(--white);
+}
+
+.logo img {
+  height: 40px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  display: block;
+  padding: 24px 0 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.nav-links a.active {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+}
+
+.sign-in-btn {
+  padding: 8px 22px;
+  border: 1.5px solid var(--orange);
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+/* ===== Shared hero / banner ===== */
+.kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.hero,
+.banner {
+  background-color: var(--light-blue);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  padding: 60px 40px;
+}
+
+.hero-text,
+.banner-text {
+  max-width: 520px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.hero p,
+.banner p {
+  font-size: 16px;
+  color: var(--blue);
+  margin-bottom: 25px;
+}
+
+.orange-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+}
+
+/* ===== Home hero ===== */
+.hero {
+  background-image: url("https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204857/Climbing_Towards_Success_dcuk4i.png");
+  padding: 80px 60px 90px;
+}
+
+/* ===== Learning journey ===== */
+.journey {
+  padding: 50px 60px 70px;
+}
+
+.journey h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.journey .subtitle {
+  font-size: 15px;
+  color: var(--blue);
+  margin-bottom: 30px;
+}
+
+.journey-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.step-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 22px 18px;
+}
+
+.step-number {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--orange);
+}
+
+.step-card h3 {
+  font-size: 16px;
+  margin: 5px 0 8px;
+}
+
+.step-card p {
+  font-size: 13px;
+  color: var(--blue);
+}
+
+/* ===== Courses banner ===== */
+.banner {
+  background-image: url("https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204868/Minimalist_E-learning_Banner_with_Graduation_Cap_l9jd7u.png");
+  padding: 40px 60px;
+}
+
+.banner h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* ===== Course cards ===== */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 40px 60px 60px;
+}
+
+.course-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 51, 102, 0.08);
+}
+
+.video-box {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 12px;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.course-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.course-card p {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* ===== Explore more courses ===== */
+.explore {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--light-blue);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 25px 30px;
+}
+
+.explore-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* 9-dot grid icon made with CSS */
+.dots-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background-image: radial-gradient(circle, var(--orange) 2.5px, transparent 3px);
+  background-size: 8px 8px;
+}
+
+.explore h3 {
+  font-size: 16px;
+}
+
+.explore p {
+  font-size: 13px;
+  color: var(--blue);
+}
+
+/* ===== Contact page ===== */
+.contact-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 20px;
+  padding: 35px 60px 60px;
+}
+
+.info-panel {
+  background-color: var(--light-blue);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.info-panel h2,
+.form-card h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.info-panel .intro {
+  font-size: 13px;
+  color: var(--blue);
+  margin-bottom: 25px;
+}
+
+.info-panel h3 {
+  font-size: 14px;
+  color: var(--orange);
+  margin-top: 18px;
+}
+
+.info-panel p,
+.info-panel a {
+  font-size: 13px;
+  color: var(--blue);
+}
+
+.form-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.form-card .note {
+  font-size: 13px;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: inherit;
+  color: var(--navy);
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.form-group textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--white);
+  background-color: var(--orange);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .hero,
+  .banner,
+  .journey,
+  .courses,
+  .contact-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .hero h1,
+  .contact-hero h1 {
+    font-size: 38px;
+  }
+
+  .journey-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  /* logo and Sign In on the first row, links on the second row */
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 20px 0;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 8px;
+  }
+
+  .nav-links a {
+    padding: 10px 0 8px;
+  }
+
+  /* artwork moves below the text so it does not cover it */
+  .hero,
+  .banner {
+    background-size: contain;
+    background-position: bottom right;
+    padding-top: 35px;
+    padding-bottom: 50vw;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .banner h1 {
+    font-size: 28px;
+  }
+
+  .journey-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .courses {
+    grid-template-columns: 1fr;
+  }
+
+  .explore {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
